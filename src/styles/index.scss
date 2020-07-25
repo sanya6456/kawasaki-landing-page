@@ -1,1 +1,18 @@
 @import 'colors';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    font-family: $roboto;
+}
+.header{
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+
+

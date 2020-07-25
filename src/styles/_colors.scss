@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+//font-variables
+$roboto: 'Roboto', sans-serif;
+
+//font-colors
+$green-color: #23872F;
+$white-color: #ffffff;
+$grey-color: #7A7A7C;
+
+//mixins
+@mixin flexcolcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+@mixin flexrowcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
