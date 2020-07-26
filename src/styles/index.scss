@@ -6,13 +6,159 @@
 }
 body{
     font-family: $roboto;
-}
-.header{
-    height: 100vh;
     margin: 0;
-    overflow: hidden;
-    
+
+    color: $grey-color;
+
+    .header{
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        background-image: linear-gradient(to right,rgb(36, 36, 36), rgb(32, 32, 32));
+        background-position: center;
+        background-size: cover;
+        .grid-rows{
+            display: grid;
+            grid-template-rows: 10% 10% auto 20%;
+            .rowone{
+                @include whm(100%,100%,0);
+                .nav{
+                    list-style: none;
+                    width: 40%;
+                    padding: 1.5rem;
+                    background-color: #181818;
+
+                    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+
+                    @include flexrowcenter;
+                    li{
+                        padding: 0 1.5rem;
+                        white-space: nowrap;
+                        .nav-link{
+                            text-decoration: none;
+                            color: $grey-color;
+
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                        }
+                        i{
+                            color: $green-color;
+                            padding-right: 8px;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+            .rowtwo{
+                @include whm(95%,100%,0);
+
+                @include flexspacebetween;
+                strong{
+                    @include strong-kawasaki;
+                }
+                .itemgroup{
+                    display: flex;
+                    width: 5%;
+                    justify-content: space-between;
+                    i{
+                        font-size: 1.8rem;
+                        color: $green-color;
+                    }
+                }
+            }
+            .rowthree{
+                @include whm(100%,100%,0);
+                .gridcolumns{
+                    @include whm(100%,100%,0);
+
+                    display: grid;
+                    grid-template-columns: 35% auto 5%;
+
+                    .colone{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: right;
+                        @include whm(100%,100%,auto 0 auto auto);
+
+                        .title-top{
+                            display: flex;
+                            margin: auto 0 0 auto;
+                            .year{
+                                transform: rotate(-90deg);
+                                color: $green-color;
+                                font-weight: 900;
+                                font-size: 3.1rem;
+                                padding-right: 1rem;
+                                margin-top: 30px;
+                            }
+                            .title-row-one{
+                                font-size: 3.6rem;
+                                margin-left: -60px;
+                                letter-spacing: 1px;
+                                #r{
+                                    font-size: 2rem;
+                                }
+                                #tm{
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        .main-title{
+                            margin: 0 0 auto auto;
+                            h1{
+                                font-family: Arial, Helvetica, sans-serif;
+                                margin-top: 0;
+                                color: $white-color;
+                                font-weight: 600;
+                                letter-spacing: 3px;
+                                line-height: 2rem;
+                            }
+                            #undisputed{
+                                font-size: 4.9rem;
+                            }
+                            #champion{
+                                font-size: 5.9rem;
+                            }
+                        }
+
+                        .small-title{
+                            width: 80%;
+                            margin: 0 0 auto auto;
+                            h2{
+
+                            }
+                        }
+                    }
+                    .coltwo{
+                        @include flexcolcenter;
+                        @include whm(100%,100%,0);
+
+                        img{
+                            display: flex;
+                            height: auto;
+                            width: 85%;
+                            margin: auto auto auto 0;
+                        }
+                    }
+                    .colthree{
+                        @include whm(100%,100%,0);
+                        @include flexcol;
+                        .pagination{
+                            @include flexcolcenter;
+                            i{
+                                padding-top: 15px;
+                            }
+                            .active{
+                                color: $green-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
 

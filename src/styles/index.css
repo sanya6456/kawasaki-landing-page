@@ -7,11 +7,270 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: #7A7A7C;
 }
 
-.header {
+body .header {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, right top, from(#242424), to(#202020));
+  background-image: linear-gradient(to right, #242424, #202020);
+  background-position: center;
+  background-size: cover;
+}
+
+body .header .grid-rows {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 10% auto 20%;
+      grid-template-rows: 10% 10% auto 20%;
+}
+
+body .header .grid-rows .rowone {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body .header .grid-rows .rowone .nav {
+  list-style: none;
+  width: 40%;
+  padding: 1.5rem;
+  background-color: #181818;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .header .grid-rows .rowone .nav li {
+  padding: 0 1.5rem;
+  white-space: nowrap;
+}
+
+body .header .grid-rows .rowone .nav li .nav-link {
+  text-decoration: none;
+  color: #7A7A7C;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+body .header .grid-rows .rowone .nav li i {
+  color: #23872F;
+  padding-right: 8px;
+  font-size: 1.3rem;
+}
+
+body .header .grid-rows .rowtwo {
+  width: 95%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .header .grid-rows .rowtwo strong {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .header .grid-rows .rowtwo .itemgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .grid-rows .rowtwo .itemgroup i {
+  font-size: 1.8rem;
+  color: #23872F;
+}
+
+body .header .grid-rows .rowthree {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body .header .grid-rows .rowthree .gridcolumns {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% auto 5%;
+      grid-template-columns: 35% auto 5%;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+  height: 100%;
+  margin: auto 0 auto auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0 0 auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #23872F;
+  font-weight: 900;
+  font-size: 3.1rem;
+  padding-right: 1rem;
+  margin-top: 30px;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
+  font-size: 3.6rem;
+  margin-left: -60px;
+  letter-spacing: 1px;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #r {
+  font-size: 2rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
+  font-size: 2rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .main-title {
+  margin: 0 0 auto auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .main-title h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 2rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
+  font-size: 4.9rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
+  font-size: 5.9rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .small-title {
+  width: 80%;
+  margin: 0 0 auto auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .coltwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .coltwo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 85%;
+  margin: auto auto auto 0;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colthree {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colthree .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colthree .pagination i {
+  padding-top: 15px;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colthree .pagination .active {
+  color: #23872F;
 }
 /*# sourceMappingURL=index.css.map */
