@@ -19,7 +19,7 @@ body{
         background-size: cover;
         .grid-rows{
             display: grid;
-            grid-template-rows: 10% 10% auto 20%;
+            grid-template-rows: 5% 10% auto 30%;
             .rowone{
                 @include whm(100%,100%,0);
                 .nav{
@@ -78,33 +78,33 @@ body{
                         display: flex;
                         flex-direction: column;
                         justify-content: right;
-                        @include whm(100%,100%,auto 0 auto auto);
+                        @include whm(80%,100%,auto 0 auto auto);
 
                         .title-top{
                             display: flex;
-                            margin: auto 0 0 auto;
+                            margin: auto auto 0 0;
                             .year{
                                 transform: rotate(-90deg);
                                 color: $green-color;
                                 font-weight: 900;
-                                font-size: 3.1rem;
+                                font-size: 2.8rem;
                                 padding-right: 1rem;
                                 margin-top: 30px;
                             }
                             .title-row-one{
-                                font-size: 3.6rem;
+                                font-size: 3.3rem;
                                 margin-left: -60px;
                                 letter-spacing: 1px;
                                 #r{
-                                    font-size: 2rem;
+                                    font-size: 1.9rem;
                                 }
                                 #tm{
-                                    font-size: 2rem;
+                                    font-size: 1.9rem;
                                 }
                             }
                         }
                         .main-title{
-                            margin: 0 0 auto auto;
+                            margin: 0 auto 0 0;
                             h1{
                                 font-family: Arial, Helvetica, sans-serif;
                                 margin-top: 0;
@@ -114,18 +114,27 @@ body{
                                 line-height: 2rem;
                             }
                             #undisputed{
-                                font-size: 4.9rem;
+                                font-size: 4.4rem;
                             }
                             #champion{
-                                font-size: 5.9rem;
+                                font-size: 5.4rem;
                             }
                         }
 
                         .small-title{
-                            width: 80%;
-                            margin: 0 0 auto auto;
+                            margin: 0 auto 0 0;
                             h2{
-
+                                margin-top: 0;
+                                letter-spacing: 3px;
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .learn-more{
+                            color: $green-color;
+                            margin: 0 auto auto 0;
+                            i{
+                                padding-left: 10px;
+                                font-size: 1.3rem;
                             }
                         }
                     }
@@ -136,8 +145,8 @@ body{
                         img{
                             display: flex;
                             height: auto;
-                            width: 85%;
-                            margin: auto auto auto 0;
+                            width: 90%;
+                            margin: auto auto 0 0;
                         }
                     }
                     .colthree{
@@ -153,6 +162,14 @@ body{
                             }
                         }
                     }
+                }
+            }
+            .rowfour{
+                @include whm(90%,100%,0 auto);
+                .gridcolumns{
+                    display: grid;
+                    grid-template-columns:10% 20% 70%;
+
                 }
             }
         }

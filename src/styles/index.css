@@ -24,8 +24,8 @@ body .header {
 body .header .grid-rows {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10% 10% auto 20%;
-      grid-template-rows: 10% 10% auto 20%;
+  -ms-grid-rows: 5% 10% auto 30%;
+      grid-template-rows: 5% 10% auto 30%;
 }
 
 body .header .grid-rows .rowone {
@@ -92,7 +92,7 @@ body .header .grid-rows .rowtwo {
 }
 
 body .header .grid-rows .rowtwo strong {
-  color: #ffffff;
+  color: #e9e9e9;
   font-weight: bold;
   font-size: 2.5rem;
   letter-spacing: 1px;
@@ -141,7 +141,7 @@ body .header .grid-rows .rowthree .gridcolumns .colone {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 100%;
+  width: 80%;
   height: 100%;
   margin: auto 0 auto auto;
 }
@@ -150,7 +150,7 @@ body .header .grid-rows .rowthree .gridcolumns .colone .title-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto 0 0 auto;
+  margin: auto auto 0 0;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
@@ -158,49 +158,64 @@ body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
           transform: rotate(-90deg);
   color: #23872F;
   font-weight: 900;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
   padding-right: 1rem;
   margin-top: 30px;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   margin-left: -60px;
   letter-spacing: 1px;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #r {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title {
-  margin: 0 0 auto auto;
+  margin: 0 auto 0 0;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title h1 {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0;
-  color: #ffffff;
+  color: #e9e9e9;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 2rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
-  font-size: 4.9rem;
+  font-size: 4.4rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
-  font-size: 5.9rem;
+  font-size: 5.4rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .small-title {
-  width: 80%;
-  margin: 0 0 auto auto;
+  margin: 0 auto 0 0;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
+  margin-top: 0;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .learn-more {
+  color: #23872F;
+  margin: 0 auto auto 0;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .learn-more i {
+  padding-left: 10px;
+  font-size: 1.3rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .coltwo {
@@ -228,8 +243,8 @@ body .header .grid-rows .rowthree .gridcolumns .coltwo img {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  width: 85%;
-  margin: auto auto auto 0;
+  width: 90%;
+  margin: auto auto 0 0;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colthree {
@@ -272,5 +287,18 @@ body .header .grid-rows .rowthree .gridcolumns .colthree .pagination i {
 
 body .header .grid-rows .rowthree .gridcolumns .colthree .pagination .active {
   color: #23872F;
+}
+
+body .header .grid-rows .rowfour {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+body .header .grid-rows .rowfour .gridcolumns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 20% 70%;
+      grid-template-columns: 10% 20% 70%;
 }
 /*# sourceMappingURL=index.css.map */
