@@ -60,6 +60,16 @@ body .header .grid-rows .rowone .nav {
 body .header .grid-rows .rowone .nav li {
   padding: 0 1.5rem;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+body .header .grid-rows .rowone .nav li:hover .nav-link {
+  color: #23872F;
+}
+
+body .header .grid-rows .rowone .nav li:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body .header .grid-rows .rowone .nav li .nav-link {
@@ -112,6 +122,39 @@ body .header .grid-rows .rowtwo .itemgroup {
 body .header .grid-rows .rowtwo .itemgroup i {
   font-size: 1.8rem;
   color: #23872F;
+  cursor: pointer;
+}
+
+body .header .grid-rows .rowtwo .itemgroup .fa-search {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+body .header .grid-rows .rowtwo .itemgroup .fa-search:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+body .header .grid-rows .rowtwo .itemgroup .fa-bars {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .header .grid-rows .rowtwo .itemgroup .fa-bars:hover {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 body .header .grid-rows .rowthree {
@@ -205,16 +248,25 @@ body .header .grid-rows .rowthree .gridcolumns .colone .small-title {
 body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
   margin-top: 0;
   letter-spacing: 3px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .learn-more {
   color: #23872F;
   margin: 0 auto auto 0;
+  cursor: pointer;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colone .learn-more:hover i {
+  padding-left: 20px;
+  -webkit-transition: padding-left 0.5s ease;
+  transition: padding-left 0.5s ease;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .learn-more i {
   padding-left: 10px;
+  -webkit-transition: padding-left 0.5s ease;
+  transition: padding-left 0.5s ease;
   font-size: 1.3rem;
 }
 
@@ -283,22 +335,164 @@ body .header .grid-rows .rowthree .gridcolumns .colthree .pagination {
 
 body .header .grid-rows .rowthree .gridcolumns .colthree .pagination i {
   padding-top: 15px;
+  cursor: pointer;
+}
+
+body .header .grid-rows .rowthree .gridcolumns .colthree .pagination i:hover {
+  color: #474749;
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colthree .pagination .active {
   color: #23872F;
 }
 
+body .header .grid-rows .rowthree .gridcolumns .colthree .pagination .active:hover {
+  color: #23872F;
+}
+
 body .header .grid-rows .rowfour {
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 }
 
 body .header .grid-rows .rowfour .gridcolumns {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10% 20% 70%;
       grid-template-columns: 10% 20% 70%;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colone {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colone .media-icons {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colone .media-icons i {
+  padding: 11% 0;
+  font-size: 2.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colone .media-icons i:hover {
+  color: #23872F;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .coltwo {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .coltwo p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 50%;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colthree {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colthree .rowone {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colthree .rowone .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 80%;
+  margin: 0 auto auto 0;
+}
+
+body .header .grid-rows .rowfour .gridcolumns .colthree .rowone .items strong {
+  color: #23872F;
+  padding-right: 3px;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+body .header .fa-chevron-down {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  color: #23872F;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease;
+}
+
+body .header .fa-chevron-down:hover {
+  bottom: 4%;
+  -webkit-transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease;
 }
 /*# sourceMappingURL=index.css.map */

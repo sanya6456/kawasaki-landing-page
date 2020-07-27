@@ -34,6 +34,17 @@ body{
                     li{
                         padding: 0 1.5rem;
                         white-space: nowrap;
+
+                        cursor: pointer;
+                        &:hover{
+                            .nav-link{
+                                color: $green-color;
+                            }
+                            i{
+                                transform: scale(1.1);
+                            }
+                        }
+
                         .nav-link{
                             text-decoration: none;
                             color: $grey-color;
@@ -63,7 +74,24 @@ body{
                     i{
                         font-size: 1.8rem;
                         color: $green-color;
+
+                        cursor: pointer;
                     }
+                    .fa-search{
+                        transition: transform 0.5s ease;
+                        &:hover{
+                            transform: scale(1.1);
+                            transition: transform 0.5s ease;
+                        }
+                    }
+                    .fa-bars{
+                        transition: transform 0.3s ease-in-out;
+                        &:hover{
+                            transform: rotate(25deg);
+                            transition: transform 0.3s ease-in-out;
+                        }
+                    }
+
                 }
             }
             .rowthree{
@@ -126,14 +154,23 @@ body{
                             h2{
                                 margin-top: 0;
                                 letter-spacing: 3px;
-                                font-size: 1.5rem;
+                                font-size: 1.4rem;
                             }
                         }
                         .learn-more{
                             color: $green-color;
                             margin: 0 auto auto 0;
+
+                            cursor: pointer;
+                            &:hover{
+                                i{
+                                    padding-left: 20px;
+                                    transition: padding-left 0.5s ease;
+                                }
+                            }
                             i{
                                 padding-left: 10px;
+                                transition: padding-left 0.5s ease;
                                 font-size: 1.3rem;
                             }
                         }
@@ -156,21 +193,99 @@ body{
                             @include flexcolcenter;
                             i{
                                 padding-top: 15px;
+
+                                cursor: pointer;
+
+                                &:hover{
+                                    color: darken($color: $grey-color, $amount: 20%);
+                                }
                             }
                             .active{
                                 color: $green-color;
+                                &:hover{
+                                    color: $green-color;
+                                }
                             }
                         }
                     }
                 }
             }
             .rowfour{
-                @include whm(90%,100%,0 auto);
+                @include whm(100%,100%,0 auto);
                 .gridcolumns{
+                    @include whm(100%,100%,0);
                     display: grid;
                     grid-template-columns:10% 20% 70%;
 
+                    .colone{
+                        @include whm(100%,100%,auto);
+                        @include flexcolcenter;
+                        .media-icons{
+                            @include whm(100%,100%,auto);
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            i{
+                                padding: 11% 0;
+                                font-size: 2.5rem;
+                                
+                                cursor: pointer;
+                                transition: 0.3s ease;
+
+                                &:hover{
+                                    color: $green-color;
+                                    transition: color 0.3s ease;
+                                }
+                            }
+                        }
+                    }
+
+                    .coltwo{
+                        @include whm(100%,100%,0);
+                        display: flex;
+                        p{
+                            @include flexcolcenter;
+                            margin-top: 50%;
+                        }
+                    }
+
+                    .colthree{
+                        display: grid;
+                        grid-template-rows: 80% 20%;
+                        .rowone{
+                            @include whm(100%,100%,0);
+                            .items{
+                                @include flexspacebetween;
+                                width: 80%;
+                                margin: 0 auto auto 0;
+                                strong{
+                                    color: $green-color;
+
+                                    padding-right: 3px;
+                                    font-size: 1.2rem;
+                                    font-weight: 100;
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+        }
+        .fa-chevron-down{
+            display: block;
+            position: absolute;
+            bottom: 5%;
+            right: 50%;
+            color: $green-color;
+            font-size: 3rem;
+
+            cursor: pointer;
+
+            transition: bottom 0.5s ease;
+
+            &:hover{
+                bottom: 4%;
+                transition: bottom 0.5s ease;
             }
         }
     }
