@@ -13,6 +13,7 @@ body {
 
 body .header {
   height: 100vh;
+  width: 100%;
   margin: 0;
   overflow: hidden;
   background-image: -webkit-gradient(linear, left top, right top, from(#242424), to(#202020));
@@ -24,14 +25,17 @@ body .header {
 body .header .grid-rows {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 5% 10% auto 30%;
-      grid-template-rows: 5% 10% auto 30%;
+  -ms-grid-rows: 5% 10% 70% auto;
+      grid-template-rows: 5% 10% 70% auto;
+  margin: 0;
 }
 
 body .header .grid-rows .rowone {
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
 }
 
 body .header .grid-rows .rowone .nav {
@@ -161,6 +165,8 @@ body .header .grid-rows .rowthree {
   width: 100%;
   height: 100%;
   margin: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
 body .header .grid-rows .rowthree .gridcolumns {
@@ -206,6 +212,26 @@ body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
   margin-top: 30px;
 }
 
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .year {
+    font-size: 1.6rem;
+    margin-top: 9px;
+  }
+}
+
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
   font-size: 3.3rem;
   margin-left: -60px;
@@ -216,8 +242,63 @@ body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one
   font-size: 1.9rem;
 }
 
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #r {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #r {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #r {
+    font-size: 1.2rem;
+  }
+}
+
 body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
   font-size: 1.9rem;
+}
+
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one #tm {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
+    font-size: 2.9rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .title-top .title-row-one {
+    font-size: 1.9rem;
+    padding-left: 8px;
+  }
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title {
@@ -237,8 +318,44 @@ body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
   font-size: 4.4rem;
 }
 
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
+    font-size: 3.8rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #undisputed {
+    font-size: 2.5rem;
+  }
+}
+
 body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
-  font-size: 5.4rem;
+  font-size: 5.3rem;
+}
+
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
+    font-size: 4.6rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
+    font-size: 3.9rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .main-title #champion {
+    font-size: 2.4rem;
+  }
 }
 
 body .header .grid-rows .rowthree .gridcolumns .colone .small-title {
@@ -251,9 +368,27 @@ body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
   font-size: 1.4rem;
 }
 
+@media only screen and (max-width: 1814px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  body .header .grid-rows .rowthree .gridcolumns .colone .small-title h2 {
+    font-size: 0.8rem;
+  }
+}
+
 body .header .grid-rows .rowthree .gridcolumns .colone .learn-more {
   color: #23872F;
-  margin: 0 auto auto 0;
+  margin: 10px auto auto 0;
   cursor: pointer;
 }
 
@@ -353,7 +488,9 @@ body .header .grid-rows .rowthree .gridcolumns .colthree .pagination .active:hov
 body .header .grid-rows .rowfour {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
 body .header .grid-rows .rowfour .gridcolumns {
