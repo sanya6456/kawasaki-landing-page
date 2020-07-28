@@ -9,367 +9,488 @@ body{
     margin: 0;
 
     color: $grey-color;
-
-    .header{
-        height: 100vh;
-        width: 100%;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right,rgb(36, 36, 36), rgb(32, 32, 32));
+    background-position: center;
+    background-size: cover;
+    .grid-rows{
+        display: grid;
+        height: 100%;
+        grid-template-rows: 10% 10% 55% 25%;
         margin: 0;
-        overflow: hidden;
-        background-image: linear-gradient(to right,rgb(36, 36, 36), rgb(32, 32, 32));
-        background-position: center;
-        background-size: cover;
-        .grid-rows{
+
+        @media only screen and(max-width:1200px){
+            grid-template-rows: 10% 60% 25%;
+        }
+
+        @media only screen and(max-width:898px){
+            grid-template-rows: 10% 90%;
+        }
+
+        .rowone{
+            @include whm(100%,100%,auto);
+
             display: grid;
-            grid-template-rows: 5% 10% 70% auto;
-            margin: 0;
-            .rowone{
-                @include whm(100%,100%,0 auto);
 
-                display: grid;
-                .nav{
-                    list-style: none;
-                    width: 40%;
-                    padding: 1.5rem;
-                    background-color: #181818;
+            @media only screen and(max-width:1200px){
+                display: none;
+            }
+            .nav{
+                list-style: none;
+                width: 40%;
+                padding: 1.5rem;
+                background-color: #181818;
 
-                    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+                height: 100%;
 
-                    @include flexrowcenter;
-                    li{
-                        padding: 0 1.5rem;
-                        white-space: nowrap;
+                clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
 
-                        cursor: pointer;
-                        &:hover{
-                            .nav-link{
-                                color: $green-color;
-                            }
-                            i{
-                                transform: scale(1.1);
-                            }
-                        }
+                @include flexrowcenter;
 
+                @media only screen and(max-width:1800px){
+                    width: 50%;
+                }
+                @media only screen and(max-width:1420px){
+                    width: 60%;
+                }
+
+                li{
+                    padding: 0 1.5rem;
+                    white-space: nowrap;
+
+                    cursor: pointer;
+                    &:hover{
                         .nav-link{
-                            text-decoration: none;
-                            color: $grey-color;
-
-                            font-size: 0.9rem;
-                            font-weight: 600;
+                            color: $green-color;
                         }
                         i{
-                            color: $green-color;
-                            padding-right: 8px;
-                            font-size: 1.3rem;
+                            transform: scale(1.1);
                         }
+                    }
+
+                    .nav-link{
+                        text-decoration: none;
+                        color: $grey-color;
+
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                    }
+                    i{
+                        color: $green-color;
+                        padding-right: 8px;
+                        font-size: 1.3rem;
                     }
                 }
             }
-            .rowtwo{
-                @include whm(95%,100%,0);
+        }
+        .rowtwo{
+            @include whm(95%,100%,auto);
 
-                @include flexspacebetween;
-                strong{
-                    @include strong-kawasaki;
+            @include flexspacebetween;
+            strong{
+                @include strong-kawasaki;
+            }
+            .item-group{
+                display: flex;
+                visibility: hidden;
+                width: auto;
+                justify-content: space-between;
+
+                @media only screen and(max-width:1200px){
+                    visibility: visible;
                 }
-                .itemgroup{
+
+                i{
+                    font-size: 2.8rem;
+                    color: $green-color;
+
+                    cursor: pointer;
+                }
+                .fa-bars{
+                    transition: transform 0.3s ease-in-out;
+                    &:hover{
+                        transform: rotate(25deg);
+                        transition: transform 0.3s ease-in-out;
+                    }
+                }
+
+            }
+        }
+        .rowthree{
+            @include whm(100%,100%,0);
+            .gridcolumns{
+                @include whm(100%,100%,auto auto 0 auto);
+
+                display: grid;
+                grid-template-columns: 35% auto 5%;
+
+                @media only screen and(max-width:1028px){
+                    grid-template-columns: 40% auto 5%;
+                }
+
+                @media only screen and(max-width:898px){
+                    
+                    @include flexcolcenter;
+
+                }
+
+                .colone{
                     display: flex;
-                    width: 5%;
-                    justify-content: space-between;
-                    i{
-                        font-size: 1.8rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    @include whm(80%,100%,auto 0 0 auto);
+
+                    @media only screen and(max-width:898px){
+                        @include whm(90%,100%,0);
+                    }
+
+
+                    .title-top{
+                        display: flex;
+                        @include whm(100%,auto,0);
+
+                        @media only screen and(max-width:898px){
+                            display: none;
+                        }
+
+
+                        .year{
+                            transform: rotate(-90deg);
+                            color: $green-color;
+                            font-weight: 900;
+                            font-size: 2.8rem;
+                            padding-right: 1rem;
+                            margin-top: 30px;
+
+                            @media only screen and(max-width:1814px){
+                                font-size: 2.6rem;
+                            }
+                            @media only screen and(max-width:1590px){
+                                font-size: 2rem;
+                                margin-top: 15px;
+                            }
+                            @media only screen and(max-width:1294px){
+                                font-size: 1.6rem;
+                                margin-top: 9px;
+                            }
+
+                        }
+                        .title-row-one{
+                            font-size: 3.2rem;
+                            margin-left: -60px;
+                            letter-spacing: 1px;
+                            #r{
+                                font-size: 1.9rem;
+                                @media only screen and(max-width:1814px){
+                                    font-size: 1.6rem;
+                                }
+                                @media only screen and(max-width:1590px){
+                                    font-size: 1.4rem;
+                                }
+                                @media only screen and(max-width:1294px){
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            #tm{
+                                font-size: 1.9rem;
+                                @media only screen and(max-width:1814px){
+                                    font-size: 1.6rem;
+                                }
+                                @media only screen and(max-width:1590px){
+                                    font-size: 1.4rem;
+                                }
+                                @media only screen and(max-width:1294px){
+                                    font-size: 1.2rem;
+                                }
+                                
+                            }
+
+                            @media only screen and(max-width:1814px){
+                                font-size: 2.8rem;
+                            }
+                            @media only screen and(max-width:1590px){
+                                font-size: 2.4rem;
+                            }
+                            @media only screen and(max-width:1294px){
+                                font-size: 1.9rem;
+                                padding-left: 8px;
+                            }
+
+                        }
+                    }
+                    .main-title{
+                        @include whm(100%,auto,0 auto 1% auto);
+
+                        @media only screen and(max-width:898px){
+                            @include flexcolcenter;
+                            margin-top: 5%;
+                        }
+
+                        h1{
+                            font-family: Arial, Helvetica, sans-serif;
+                            color: $white-color;
+                            font-weight: 600;
+                            letter-spacing: 3px;
+                            line-height: 2rem;
+
+                            @media only screen and(max-width:898px){
+                                line-height: 0;
+                            }
+
+                        }
+                        #undisputed{
+                            font-size: 4.4rem;
+
+                            @media only screen and(max-width:1814px){
+                                font-size: 3.8rem;
+                            }
+                            @media only screen and(max-width:1590px){
+                                font-size: 3.2rem;
+                            }
+                            @media only screen and(max-width:1294px){
+                                font-size: 2.5rem;
+                            }
+                            @media only screen and(max-width:898px){
+                                font-size: 4rem;
+                            }
+                        }
+                        #champion{
+                            font-size: 5.3rem;
+
+                            @media only screen and(max-width:1814px){
+                                font-size: 4.6rem;
+                            }
+                            @media only screen and(max-width:1590px){
+                                font-size: 3.9rem;
+                            }
+                            @media only screen and(max-width:1294px){
+                                font-size: 3.1rem;
+                            }
+                        }
+                    }
+
+                    .small-title{
+                        @include whm(100%,auto,0 auto 5%);
+
+                        @media only screen and(max-width:898px){
+                            display: none;
+                        }
+
+                        h2{
+                            margin: auto;
+                            letter-spacing: 3px;
+                            font-size: 1.4rem;
+
+                            @media only screen and(max-width:1814px){
+                                font-size: 1.1rem;
+                            }
+                            @media only screen and(max-width:1590px){
+                                font-size: 0.9rem;
+                            }
+                            @media only screen and(max-width:1294px){
+                                font-size: 0.65rem;
+                            }
+                        }
+                    }
+                    .learn-more{
                         color: $green-color;
+                        @include whm(100%,auto,0 auto 3rem auto);
 
                         cursor: pointer;
-                    }
-                    .fa-search{
-                        transition: transform 0.5s ease;
                         &:hover{
-                            transform: scale(1.1);
-                            transition: transform 0.5s ease;
+                            i{
+                                padding-left: 20px;
+                                transition: padding-left 0.5s ease;
+                            }
                         }
-                    }
-                    .fa-bars{
-                        transition: transform 0.3s ease-in-out;
-                        &:hover{
-                            transform: rotate(25deg);
-                            transition: transform 0.3s ease-in-out;
-                        }
-                    }
+                        i{
+                            padding-left: 10px;
+                            transition: padding-left 0.5s ease;
+                            font-size: 1.3rem;
 
+                            @media only screen and(max-width:898px){
+                                font-size: 1.5rem;
+                            }
+
+                        }
+
+                        @media only screen and(max-width:898px){
+                            @include flexrowcenter;
+                            @include whm(100%,auto,0 auto 6rem auto);
+                            font-size: 1.7rem;
+                        }
+
+                    }
                 }
-            }
-            .rowthree{
-                @include whm(100%,100%,0);
-                display: grid;
-                .gridcolumns{
+                .coltwo{
+                    @include flexcolcenter;
                     @include whm(100%,100%,0);
 
-                    display: grid;
-                    grid-template-columns: 35% auto 5%;
-
-                    .colone{
+                    img{
                         display: flex;
-                        flex-direction: column;
-                        justify-content: right;
-                        @include whm(80%,100%,auto 0 auto auto);
-
-                        .title-top{
-                            display: flex;
-                            margin: auto auto 0 0;
-                            .year{
-                                transform: rotate(-90deg);
-                                color: $green-color;
-                                font-weight: 900;
-                                font-size: 2.8rem;
-                                padding-right: 1rem;
-                                margin-top: 30px;
-
-                                @media only screen and(max-width:1814px){
-                                    font-size: 2.6rem;
-                                }
-                                @media only screen and(max-width:1590px){
-                                    font-size: 2rem;
-                                    margin-top: 15px;
-                                }
-                                @media only screen and(max-width:1294px){
-                                    font-size: 1.6rem;
-                                    margin-top: 9px;
-                                }
-
-                            }
-                            .title-row-one{
-                                font-size: 3.3rem;
-                                margin-left: -60px;
-                                letter-spacing: 1px;
-                                #r{
-                                    font-size: 1.9rem;
-                                    @media only screen and(max-width:1814px){
-                                        font-size: 1.6rem;
-                                    }
-                                    @media only screen and(max-width:1590px){
-                                        font-size: 1.4rem;
-                                    }
-                                    @media only screen and(max-width:1294px){
-                                        font-size: 1.2rem;
-                                    }
-                                }
-                                #tm{
-                                    font-size: 1.9rem;
-                                    @media only screen and(max-width:1814px){
-                                        font-size: 1.6rem;
-                                    }
-                                    @media only screen and(max-width:1590px){
-                                        font-size: 1.4rem;
-                                    }
-                                    @media only screen and(max-width:1294px){
-                                        font-size: 1.2rem;
-                                    }
-                                    
-                                }
-
-                                @media only screen and(max-width:1814px){
-                                    font-size: 2.9rem;
-                                }
-                                @media only screen and(max-width:1590px){
-                                    font-size: 2.4rem;
-                                }
-                                @media only screen and(max-width:1294px){
-                                    font-size: 1.9rem;
-                                    padding-left: 8px;
-                                }
-
-                            }
+                        height: auto;
+                        width: 85%;
+                        margin: auto auto auto 0;
+                        @media only screen and(max-width:1650px){
+                            width: 100%;
                         }
-                        .main-title{
-                            margin: 0 auto 0 0;
-                            h1{
-                                font-family: Arial, Helvetica, sans-serif;
-                                margin-top: 0;
-                                color: $white-color;
-                                font-weight: 600;
-                                letter-spacing: 3px;
-                                line-height: 2rem;
-                            }
-                            #undisputed{
-                                font-size: 4.4rem;
-
-                                @media only screen and(max-width:1814px){
-                                    font-size: 3.8rem;
-                                }
-                                @media only screen and(max-width:1590px){
-                                    font-size: 3.2rem;
-                                }
-                                @media only screen and(max-width:1294px){
-                                    font-size: 2.5rem;
-                                }
-                            }
-                            #champion{
-                                font-size: 5.3rem;
-
-                                @media only screen and(max-width:1814px){
-                                    font-size: 4.6rem;
-                                }
-                                @media only screen and(max-width:1590px){
-                                    font-size: 3.9rem;
-                                }
-                                @media only screen and(max-width:1294px){
-                                    font-size: 2.4rem;
-                                }
-                            }
+                        @media only screen and(max-width:1294px){
+                            transform: scale(1.1);
                         }
-
-                        .small-title{
-                            margin: 0 auto 0 0;
-                            h2{
-                                margin-top: 0;
-                                letter-spacing: 3px;
-                                font-size: 1.4rem;
-
-                                @media only screen and(max-width:1814px){
-                                    font-size: 1.1rem;
-                                }
-                                @media only screen and(max-width:1590px){
-                                    font-size: 0.9rem;
-                                }
-                                @media only screen and(max-width:1294px){
-                                    font-size: 0.8rem;
-                                }
-                            }
+                        @media only screen and(max-width:898px){
+            
+                            width: 80%;
+                            margin: auto;
+                
                         }
-                        .learn-more{
-                            color: $green-color;
-                            margin: 10px auto auto 0;
+                    }
+                }
+                .colthree{
+                    @include whm(100%,100%,auto);
+                    @include flexcol;
+
+                    @media only screen and(max-width:898px){
+                        height: auto;
+                    }
+
+                    .pagination{
+                        @include flexcolcenter;
+                        @media only screen and(max-width:898px){
+                            @include flexspacebetween;
+                            flex-direction: row;
+                            @include whm(30%,auto,auto auto 10% auto);
+                        }
+                        i{
+                            padding-top: 15px;
 
                             cursor: pointer;
+
                             &:hover{
-                                i{
-                                    padding-left: 20px;
-                                    transition: padding-left 0.5s ease;
-                                }
-                            }
-                            i{
-                                padding-left: 10px;
-                                transition: padding-left 0.5s ease;
-                                font-size: 1.3rem;
+                                color: darken($color: $grey-color, $amount: 20%);
                             }
                         }
-                    }
-                    .coltwo{
-                        @include flexcolcenter;
-                        @include whm(100%,100%,0);
-
-                        img{
-                            display: flex;
-                            height: auto;
-                            width: 90%;
-                            margin: auto auto 0 0;
-                        }
-                    }
-                    .colthree{
-                        @include whm(100%,100%,0);
-                        @include flexcol;
-                        .pagination{
-                            @include flexcolcenter;
-                            i{
-                                padding-top: 15px;
-
-                                cursor: pointer;
-
-                                &:hover{
-                                    color: darken($color: $grey-color, $amount: 20%);
-                                }
-                            }
-                            .active{
+                        .active{
+                            color: $green-color;
+                            &:hover{
                                 color: $green-color;
-                                &:hover{
-                                    color: $green-color;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .rowfour{
-                @include whm(100%,100%,0);
-                display: grid;
-                .gridcolumns{
-                    @include whm(100%,100%,0);
-                    display: grid;
-                    grid-template-columns:10% 20% 70%;
-
-                    .colone{
-                        @include whm(100%,100%,auto);
-                        @include flexcolcenter;
-                        .media-icons{
-                            @include whm(100%,100%,auto);
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            i{
-                                padding: 11% 0;
-                                font-size: 2.5rem;
-                                
-                                cursor: pointer;
-                                transition: 0.3s ease;
-
-                                &:hover{
-                                    color: $green-color;
-                                    transition: color 0.3s ease;
-                                }
-                            }
-                        }
-                    }
-
-                    .coltwo{
-                        @include whm(100%,100%,0);
-                        display: flex;
-                        p{
-                            @include flexcolcenter;
-                            margin-top: 50%;
-                        }
-                    }
-
-                    .colthree{
-                        display: grid;
-                        grid-template-rows: 80% 20%;
-                        .rowone{
-                            @include whm(100%,100%,0);
-                            .items{
-                                @include flexspacebetween;
-                                width: 80%;
-                                margin: 0 auto auto 0;
-                                strong{
-                                    color: $green-color;
-
-                                    padding-right: 3px;
-                                    font-size: 1.2rem;
-                                    font-weight: 100;
-                                }
                             }
                         }
                     }
                 }
             }
         }
-        .fa-chevron-down{
-            display: block;
-            position: absolute;
-            bottom: 5%;
-            right: 50%;
-            color: $green-color;
-            font-size: 3rem;
+        .rowfour{
+            @include whm(100%,100%,0);
 
-            cursor: pointer;
+            @media only screen and(max-width:898px){
+                display: none;
+            }
 
-            transition: bottom 0.5s ease;
+            .gridcolumns{
+                @include whm(100%,100%,0);
+                display: grid;
+                grid-template-columns:10% 20% 70%;
 
-            &:hover{
-                bottom: 4%;
-                transition: bottom 0.5s ease;
+                .colone{
+                    @include whm(100%,100%,auto);
+                    @include flexcolcenter;
+                    .media-icons{
+                        @include whm(100%,100%,auto);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        i{
+                            padding: 11% 0;
+                            font-size: 2.5rem;
+                            
+                            cursor: pointer;
+                            transition: 0.3s ease;
+
+                            &:hover{
+                                color: $green-color;
+                                transition: color 0.3s ease;
+                            }
+                        }
+                    }
+                }
+
+                .coltwo{
+                    @include whm(100%,100%,0);
+                    display: flex;
+                    p{
+                        margin: auto auto 1rem auto;
+                        @media only screen and(max-width:1814px){
+                            font-size: 0.9rem;
+                        }
+                        @media only screen and(max-width:1504px){
+                            font-size: 0.8rem;
+                        }
+                        @media only screen and(max-width:1350px){
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+
+                .colthree{
+                    @include whm(100%,100%,0);
+                    .first-row{
+                        @include whm(100%,100%,0);
+                        .items{
+                            @include flexspacebetween;
+                            width: 80%;
+                            margin: 0 auto;
+                            strong{
+                                color: $green-color;
+
+                                padding-right: 3px;
+                                font-size: 1.2rem;
+                                font-weight: 100;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+    .fa-chevron-down{
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        right: 50%;
+        color: $green-color;
+        font-size: 3rem;
+
+        cursor: pointer;
+
+        transition: bottom 0.5s ease;
+
+        &:hover{
+            bottom: 4%;
+            transition: bottom 0.5s ease;
+
+            @media only screen and(max-width:898px){
+            
+                bottom: 0;
+    
+            }
+
+        }
+
+        @media only screen and(max-width:898px){
+            
+            bottom: 2%;
+
+        }
+
+    }
 }
+
 
 
 
