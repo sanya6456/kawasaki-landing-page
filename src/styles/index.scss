@@ -4,12 +4,15 @@
     box-sizing: border-box;
     padding: 0;
 }
+
 body{
     font-family: $roboto;
     margin: 0;
 
+
     color: $grey-color;
 }
+
 .header{
     height: 100vh;
     width: 100%;
@@ -92,6 +95,7 @@ body{
             @include whm(95%,100%,auto);
 
             @include flexspacebetween;
+
             strong{
                 @include strong-kawasaki;
             }
@@ -228,7 +232,7 @@ body{
 
                         @media only screen and(max-width:898px){
                             @include flexcolcenter;
-                            margin-top: 5%;
+                            margin: 2rem auto 0 auto;
                         }
 
                         h1{
@@ -256,7 +260,16 @@ body{
                                 font-size: 2.5rem;
                             }
                             @media only screen and(max-width:898px){
-                                font-size: 4rem;
+                                font-size: 3.5rem;
+                            }
+                            @media only screen and(max-width:550px){
+                                font-size: 3rem;
+                            }
+                            @media only screen and(max-width:480px){
+                                font-size: 2.5rem;
+                            }
+                            @media only screen and(max-width:390px){
+                                font-size: 2.2rem;
                             }
                         }
                         #champion{
@@ -270,6 +283,15 @@ body{
                             }
                             @media only screen and(max-width:1294px){
                                 font-size: 3.1rem;
+                            }
+                            @media only screen and(max-width:550px){
+                                font-size: 2.5rem;
+                            }
+                            @media only screen and(max-width:480px){
+                                font-size: 2rem;
+                            }
+                            @media only screen and(max-width:390px){
+                                font-size: 1.9rem;
                             }
                         }
                     }
@@ -317,13 +339,30 @@ body{
                                 font-size: 1.5rem;
                             }
 
+                            @media only screen and(max-width:550px){
+                                font-size: 1.3rem;
+                            }
+
+                            @media only screen and(max-width:390px){
+                                font-size: 1.1rem;
+                            }
+
                         }
 
                         @media only screen and(max-width:898px){
                             @include flexrowcenter;
-                            @include whm(100%,auto,0 auto 6rem auto);
+                            margin: 2rem auto auto auto;
                             font-size: 1.7rem;
                         }
+
+                        @media only screen and(max-width:550px){
+                            font-size: 1.3rem;
+                        }
+
+                        @media only screen and(max-width:390px){
+                            font-size: 1.1rem;
+                        }
+
 
                     }
                 }
@@ -348,6 +387,18 @@ body{
                             margin: auto;
                 
                         }
+                        @media only screen and(max-width:700px){
+            
+                            width: 90%;
+                            margin: auto;
+                
+                        }
+                        @media only screen and(max-width:600px){
+            
+                            width: 100%;
+                            margin: auto;
+                
+                        }
                     }
                 }
                 .colthree{
@@ -360,11 +411,36 @@ body{
 
                     .pagination{
                         @include flexcolcenter;
+
                         @media only screen and(max-width:898px){
                             @include flexspacebetween;
                             flex-direction: row;
                             @include whm(30%,auto,auto auto 10% auto);
                         }
+
+                        @media only screen and(max-width:800px){
+                            @include flexspacebetween;
+                            flex-direction: row;
+                            @include whm(35%,auto,auto auto 10% auto);
+                        }
+
+                        @media only screen and(max-width:700px){
+            
+                            @include flexspacebetween;
+                            flex-direction: row;
+                            @include whm(40%,auto,auto auto 15% auto);
+                
+                        }
+
+                        @media only screen and(max-width:550px){
+            
+                            @include flexspacebetween;
+                            flex-direction: row;
+                            @include whm(45%,auto,auto auto 20% auto);
+                
+                        }
+
+
                         i{
                             padding-top: 15px;
 
@@ -458,6 +534,8 @@ body{
             }
         }
     }
+
+
     .fa-chevron-down{
         display: block;
         position: absolute;
@@ -485,10 +563,17 @@ body{
         @media only screen and(max-width:898px){
             
             bottom: 2%;
+            right: 45%;
 
         }
 
+        @media only screen and(max-width:390px){
+            font-size: 2.5rem;
+        }
+
     }
+
+
 }
 
 
