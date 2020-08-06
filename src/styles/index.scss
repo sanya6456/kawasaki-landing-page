@@ -21,6 +21,25 @@ body{
     background-position: center;
     background-size: cover;
 
+    //rotate phone if height is too small...
+    .rotate-alert{
+        @media screen and(min-height:551px){
+            display: none;
+        }
+        @include whm(100%,100%,0);
+        .rotate{
+            @include flexcolcenter;
+            @include whm(100%,100%,auto);
+            color: $grey-color;
+            line-height: 3rem;
+            strong{
+                color: $green-color;
+                font-size: 2.5rem;
+                font-weight: 1000;
+            }
+        }
+    }
+
 
     .grid-rows{
         display: grid;
@@ -34,6 +53,10 @@ body{
 
         @media only screen and(max-width:898px){
             grid-template-rows: 10% 90%;
+        }
+
+        @media screen and(max-height:550px){
+            display: none;
         }
 
         .rowone{
@@ -276,18 +299,6 @@ body{
                                 font-size: 2.5rem;
                             }
 
-                            //resp. height
-
-                            @media only screen and(max-height:885px){
-                                font-size: 2.8rem;
-                            }
-                            @media only screen and(max-height:635px){
-                                font-size: 2.3rem;
-                            }
-                            @media only screen and(max-height:550px){
-                                font-size: 1.8rem;
-                            }
-
                         }
                         #champion{
                             font-size: 5.3rem;
@@ -311,18 +322,6 @@ body{
                                 font-size: 1.9rem;
                             }
 
-                            //resp. height
-
-                            @media only screen and(max-height:885px){
-                                font-size: 2.5rem;
-                            }
-                            @media only screen and(max-height:635px){
-                                font-size: 2rem;
-                            }
-
-                            @media only screen and(max-height:550px){
-                                font-size: 1.6rem;
-                            }
 
                         }
                     }
@@ -378,19 +377,6 @@ body{
                                 font-size: 1.1rem;
                             }
 
-                            //resp. height
-
-                            @media only screen and(max-height:885px){
-                                font-size: 1.4rem;
-                            }
-                            @media only screen and(max-height:635px){
-                                font-size: 1.1rem;
-                            }
-
-                            @media only screen and(max-height:550px){
-                                font-size: 0.9rem;
-                            }
-
 
                         }
 
@@ -408,22 +394,13 @@ body{
                             font-size: 1.1rem;
                         }
 
-                        //resp. height
-                        @media only screen and(max-height:635px){
-                            margin: 1rem auto auto auto;
-                            font-size: 1.1rem;
-                        }
-
-                        @media only screen and(max-height:550px){
-                            font-size: 0.9rem;
-                        }
-
 
                     }
                 }
                 .coltwo{
                     @include flexcolcenter;
                     @include whm(100%,100%,0);
+
 
                     img{
                         display: flex;
@@ -442,26 +419,6 @@ body{
                             margin: auto;
                 
                         }
-                        @media only screen and(max-width:700px){
-            
-                            width: 90%;
-                
-                        }
-                        @media only screen and(max-width:600px){
-            
-                            width: 100%;
-                
-                        }
-
-                        //resp. height
-                        @media only screen and(max-height:635px){
-                            width: 80%;
-                        }
-
-                        @media only screen and(max-height:550px){
-                            width: 70%;
-                        }
-
                     }
                 }
                 .colthree{
@@ -497,13 +454,6 @@ body{
             
                             @include whm(45%,auto,auto auto 20% auto);
                 
-                        }
-                        //resp. height
-                        @media only screen and(max-height:635px){
-                            @include whm(40%,auto,auto auto 20% auto);
-                        }
-                        @media only screen and(max-height:550px){
-                            @include whm(35%,auto,auto auto 20% auto);
                         }
 
 
@@ -606,7 +556,7 @@ body{
         display: block;
         position: absolute;
         bottom: 5%;
-        right: 50%;
+        right: 48%;
         color: $green-color;
         font-size: 3rem;
 
@@ -636,9 +586,8 @@ body{
             font-size: 2.5rem;
         }
 
-        //resp. height
-        @media only screen and(max-height:635px){
-            font-size: 2.5rem;
+        @media screen and(max-height:550px){
+            display: none;
         }
 
     }
