@@ -13,6 +13,8 @@ $width:width;
 $height:height;
 $margin:margin;
 
+
+
 //flex-mixins
 @mixin flexcolcenter {
     display: flex;
@@ -41,6 +43,8 @@ $margin:margin;
     margin: auto;
 }
 
+
+
 // .rowtwo 'Kawasaki'
 @mixin strong-kawasaki{
     color: $white-color;
@@ -56,7 +60,7 @@ $margin:margin;
 
 }
 
-//width, height == 100%, margin == 0;
+//width, height margin;
 @mixin whm($width,$height,$margin){
     width: $width;
     height: $height;
